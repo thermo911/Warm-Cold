@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="city_name">Санкт-Петербург</string>
+    <string name="curInfo">Описание: </string>
+    <string name="cloudy">облачно</string>
+    <string name="sunny">солнечно</string>
+    <string name="raining">идет дождь</string>
+    <string name="settingsStr">настройки</string>
+</resources>
