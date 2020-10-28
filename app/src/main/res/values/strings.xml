@@ -1,9 +1,25 @@
 <resources>
     <string name="app_name" translatable="false">Warm &amp; Cold</string>
-    <string name="city_name">Saint-Petersburg</string>
+
     <string name="curInfo">info: </string>
     <string name="cloudy">cloudy</string>
     <string name="sunny">sunny</string>
     <string name="raining">raining</string>
-    <string name="settingsStr">settings</string>
+    <string name="settings_str">settings</string>
+    <string name="choosing_city_activity_label">Choosing the city</string>
+    <string name="choose_the_city">Choose the city</string>
+    <string name="ok" translatable="false">Ok</string>
+
+    <string name="cityname_Saint_Petersburg">Saint-Petersburg</string>
+    <string name="cityname_moscow">Moscow</string>
+    <string name="cityname_london">London</string>
+    <string name="cityname_paris">Paris</string>
+    <string name="cityname_berlin">Berlin</string>
+    <string name="cityname_rome">Rome</string>
+    <string name="cityname_saratov">Saratov</string>
+    <string name="cityname_washington">Washington</string>
+    <string name="cityname_newcastle">New Castle</string>
+    <string name="btntext_change">Change</string>
+    <string name="temp_value_c" translatable="false">%d°C</string>
+    <string name="additional_info">Additional info</string>
 </resources>
