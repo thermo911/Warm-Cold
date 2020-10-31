@@ -9,15 +9,24 @@
 
     <TextView
         android:id="@+id/cityName"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:padding="10dp"
-        android:textSize="30sp"
-        android:textStyle="bold|italic"
+        android:layout_margin="@dimen/margin_normal"
+        android:text="@string/cityname_Saint_Petersburg"
         android:textColor="@color/colorMainText"
-        android:text="@string/city_name"
+        android:textSize="@dimen/textsize_header"
+        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnChangeCity"
+        android:layout_margin="@dimen/margin_normal"
+        android:text="@string/btntext_change"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -25,10 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:padding="10dp"
-        android:textSize="60sp"
+        android:layout_margin="@dimen/margin_normal"
+        android:textSize="@dimen/textsize_xxl"
         android:textColor="@color/colorSecondText"
-        android:text="+10°C"
+        android:text="@string/temp_value_c"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cityName"/>
@@ -37,9 +46,9 @@
         android:id="@+id/currentInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:layout_margin="@dimen/margin_normal"
         android:fontFamily="monospace"
-        android:textSize="20sp"
+        android:textSize="@dimen/textsize_second"
         android:textColor="@color/colorThirdText"
         android:text="@string/curInfo"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -49,16 +58,31 @@
         android:id="@+id/settingsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/margin_normal"
         android:fontFamily="monospace"
-        android:text="@string/settingsStr"
+        android:text="@string/settings_str"
+        android:onClick="clockOnSettingsBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:text="@string/additional_info"
+        android:fontFamily="monospace"
+        android:textColor="@color/colorThirdText"
+        android:textSize="@dimen/textsize_second"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentInfo" />
 
-
-
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="additional info should be somewhere in this part of xml file"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

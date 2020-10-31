@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="city_name">Санкт-Петербург</string>
     <string name="curInfo">Описание: </string>
     <string name="cloudy">облачно</string>
     <string name="sunny">солнечно</string>
     <string name="raining">идет дождь</string>
-    <string name="settingsStr">настройки</string>
+    <string name="settings_str">настройки</string>
+
+    <string name="choosing_city_activity_label">Выбор города</string>
+    <string name="choose_the_city">Выберите город</string>
+
+    <string name="cityname_Saint_Petersburg">Санкт-Петербург</string>
+    <string name="cityname_moscow">Москва</string>
+    <string name="cityname_london">Лондон</string>
+    <string name="cityname_paris">Париж</string>
+    <string name="cityname_berlin">Берлин</string>
+    <string name="cityname_rome">Рим</string>
+    <string name="cityname_saratov">Саратов</string>
+    <string name="cityname_washington">Вашингтон</string>
+    <string name="cityname_newcastle">Нью-Касл</string>
+    <string name="btntext_change">Change</string>
+
+    <string name="additional_info">Доп. информация</string>
 </resources>
