@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseCityActivity">
+
+    <TextView
+        android:id="@+id/textViewChooseCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:text="@string/choose_the_city"
+        android:textSize="@dimen/textsize_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/chosenCityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChooseCity" />
+
+    <ScrollView
+        android:id="@+id/cityScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintTop_toBottomOf="@+id/chosenCityEditText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_Saint_Petersburg"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_moscow"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_london"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_paris"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_berlin"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_rome"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_saratov"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_washington"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_normal"
+                android:text="@string/cityname_newcastle"
+                android:textSize="@dimen/textsize_second"
+                android:onClick="clickOnCityNameText"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnConfirmChoose"
+        android:text="@string/ok"
+        app:layout_constraintEnd_toEndOf="@+id/cityScroll"
+        app:layout_constraintTop_toBottomOf="@+id/cityScroll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
