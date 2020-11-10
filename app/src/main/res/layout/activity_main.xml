@@ -23,9 +23,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="btnChangeCity"
+        android:onClick="btnDayInHistory"
         android:layout_margin="@dimen/margin_normal"
-        android:text="@string/btntext_change"
+        android:text="@string/day_in_history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -11,16 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ChooseCityActivity"
-            android:label="@string/choosing_city_activity_label">
-        </activity>
-        <activity android:name=".MainActivity">
+            android:name=".ChooseCityActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>

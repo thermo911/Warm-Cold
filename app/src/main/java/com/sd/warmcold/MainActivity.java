@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
@@ -21,10 +22,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView cityNameText = (TextView)findViewById(R.id.cityName);
-        String name = MyApp.getInstance().getCurCityName().getCity();
-        cityNameText.setText(name);
+        String name;
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if(bundle != null) {
+            name = bundle.getString(Keys.CITY_NAME);
+            cityNameText.setText(name);
+            MyApp.getInstance().getStorage().setCityName(name);
+        } else {
+            name = MyApp.getInstance().getStorage().getCityName();
+            cityNameText.setText(name);
+        }
 
-        int temp = MyApp.getInstance().getTemperatureStorage().getTemp();
+        int temp = MyApp.getInstance().getStorage().getTemp();
         TextView tempText = (TextView)findViewById(R.id.curTemp);
         tempText.setText(String.format(getString(R.string.temp_value_c), temp));
 
@@ -69,12 +79,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
 
-        int temp = MyApp.getInstance().getTemperatureStorage().getTemp();
+        int temp = MyApp.getInstance().getStorage().getTemp();
         TextView tempText = (TextView)findViewById(R.id.curTemp);
         tempText.setText(String.format(getString(R.string.temp_value_c), temp));
 
         TextView cityNameText = (TextView)findViewById(R.id.cityName);
-        String name = MyApp.getInstance().getCurCityName().getCity();
+        String name = MyApp.getInstance().getStorage().getCityName();
         cityNameText.setText(name);
 
         Log.i(TAG, "onRestart");
@@ -92,19 +102,20 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onDestroy");
     }
 
-    public void btnChangeCity(View view) {
-        Intent intent = new Intent(MainActivity.this, ChooseCityActivity.class);
-        startActivity(intent);
-    }
-
     public void clickOnSettingsBtn(View view) {
-        int temp = MyApp.getInstance().getTemperatureStorage().getTemp();
-        MyApp.getInstance().getTemperatureStorage().setTemp(temp+1);
-        temp = MyApp.getInstance().getTemperatureStorage().getTemp();
+        int temp = MyApp.getInstance().getStorage().getTemp();
+        MyApp.getInstance().getStorage().setTemp(temp+1);
+        temp = MyApp.getInstance().getStorage().getTemp();
 
         TextView tempText = (TextView)findViewById(R.id.curTemp);
         tempText.setText(String.format(getString(R.string.temp_value_c), temp));
 
         Toast.makeText(MainActivity.this, "Settings coming soon", Toast.LENGTH_SHORT).show();
+    }
+
+    public void btnDayInHistory(View view) {
+        Uri address = Uri.parse("https://www.history.com/this-day-in-history");
+        Intent linkInet = new Intent(Intent.ACTION_VIEW, address);
+        startActivity(linkInet);
     }
 }

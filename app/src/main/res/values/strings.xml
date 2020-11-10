@@ -22,4 +22,5 @@
     <string name="btntext_change">Change</string>
     <string name="temp_value_c" translatable="false">%d°C</string>
     <string name="additional_info">Additional info</string>
+    <string name="day_in_history">Day in History</string>
 </resources>

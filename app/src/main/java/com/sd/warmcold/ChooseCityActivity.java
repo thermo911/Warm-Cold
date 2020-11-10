@@ -2,7 +2,6 @@ package com.sd.warmcold;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static com.sd.warmcold.Keys.CITY_NAME;
 
 public class ChooseCityActivity extends AppCompatActivity {
 
@@ -34,8 +35,8 @@ public class ChooseCityActivity extends AppCompatActivity {
         if(String.valueOf(editText.getText()).trim().isEmpty()) {
             Toast.makeText(ChooseCityActivity.this, "Empty string!", Toast.LENGTH_SHORT).show();
         } else {
-            MyApp.getInstance().getCurCityName().setCity(String.valueOf(editText.getText()));
             Intent intent = new Intent(ChooseCityActivity.this, MainActivity.class);
+            intent.putExtra(CITY_NAME, String.valueOf(editText.getText()));
             startActivity(intent);
         }
     }
