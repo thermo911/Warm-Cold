@@ -4,9 +4,7 @@ import android.app.Application;
 
 public class MyApp extends Application {
     private static MyApp INSTANCE = null;
-    private ChosenTemperatureStorage temperatureStorage = new ChosenTemperatureStorage();
-    private CurrentCityName curCityName = new CurrentCityName();
-
+    private Storage storage = new Storage();
     @Override
     public void onCreate() {
         super.onCreate();
@@ -17,11 +15,7 @@ public class MyApp extends Application {
         return INSTANCE;
     }
 
-    public ChosenTemperatureStorage getTemperatureStorage() {
-        return temperatureStorage;
-    }
-
-    public CurrentCityName getCurCityName() {
-        return curCityName;
+    public Storage getStorage() {
+        return storage;
     }
 }
